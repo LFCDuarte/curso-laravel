@@ -2,17 +2,17 @@
 
 @section('title', 'Listagem dos Professores')
 @section('content_header')
-    <h1>Listagem dos Professores</h1>
+    <h1>Listagem dos Alunos </h1>
 @stop
 @section('content')
 <div class="row">
 <div class="text-end">
 
-    <a class="btn btn-primary" href="{{route ('instructors.create')}}"><i class="fas fa-plus"></i> Cadastrar</a>
+    <a class="btn btn-primary" href="{{route ('students.create')}}"><i class="fas fa-plus"></i> Cadastrar</a>
 </div>
 </div>
 
-<form action="{{ route ('instructors.index') }}" method="get">
+<form action="{{ route ('students.index') }}" method="get">
     <div class="row">
         <div class="col-md-4">
             <input type="text" name="search" class="form-control" placeholder="Pesquisar">
@@ -37,13 +37,13 @@
     </thead>
     <tbody>
 
-        @foreach ($instructors as $instructor)
+        @foreach ($students as $student)
         <tr>
-            <td>{{$instructor->name}}</td>
-            <td>{{$instructor->email}}</td>
+            <td>{{$student->name}}</td>
+            <td>{{$student->email}}</td>
             <td>
-                <a class="btn btn-outline-success" href="{{ route('instructors.edit', $instructor->id)}}"><i class="fas fa-pen"></i></a>
-                <a class="btn btn-outline-danger" href="{{ route('instructors.show', $instructor->id)}}"><i class="fas fa-trash"></i></a>
+                <a class="btn btn-outline-success" href="{{ route('students.edit', $student->id)}}"><i class="fas fa-pen"></i></a>
+                <a class="btn btn-outline-danger" href="{{ route('students.show', $student->id)}}"><i class="fas fa-trash"></i></a>
              </td>
         </tr>
     @endforeach

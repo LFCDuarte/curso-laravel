@@ -8,8 +8,8 @@
 
 <ul>
         
-    <li> {{$disciplinary->name}} </li>
-    <li> {{$disciplinary->email}} </li>
+    <li> {{$disciplinary->name_disciplinary}} </li>
+    <li> {{$disciplinary->workload}} </li>
     <li> {{$disciplinary->created_at}}</li>
 
 </ul>

@@ -10,8 +10,8 @@ class StoreUpdateDisciplinaryFormRequest extends FormRequest
     {
         return [
 
-            'nam_disciplina' => 'required|string|unique',
-            'carga_horaria' => 'required',
+            'name_disciplinary' => 'required|string',
+            'workload' => 'required',
 
         ];
 

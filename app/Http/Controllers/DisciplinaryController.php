@@ -16,7 +16,7 @@ class DisciplinaryController extends Controller
 
          $disciplinarys = Disciplinary::where(function($query) use ($search){
             if($search){
-                $query -> orWhere ('name', 'LIKE', "%{$search}");
+                $query -> orWhere ('name_disciplinary', 'LIKE', "%{$search}");
 
              }
          })->get();
@@ -56,7 +56,7 @@ class DisciplinaryController extends Controller
             return redirect()-> route('disciplinarys.index');
         }
 
-        return view('disciplinarys.edit', compact('instructor'));
+        return view('disciplinarys.edit', compact('disciplinary'));
     }
 
     public function update(StoreUpdateDisciplinaryFormRequest $request, $id)

@@ -10,7 +10,7 @@ class StoreUpdateInstructorDisciplineFormRequest extends FormRequest
     {
         return [
             'instructor_id'=> ['integer', 'exists:instructors,id'],
-            'disciplinary_id'=> ['integer', 'exists:disciplinaries,id'],
+            'disciplinary_id'=> ['integer', 'exists:disciplinarys,id'],
         ];
     }
 }

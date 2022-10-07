@@ -4,7 +4,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\DisciplinaryController;
 use App\Http\Controllers\InstructorDisciplineController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SchoolClassController;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +44,16 @@ Route::resource('instructor_discipline', InstructorDisciplineController::class)-
 
 //SchoolClass
 Route::resource('school_class', SchoolClassController::class);
+
+//Studentes
+// Route::delete('/students/{id}', [StudentController::class, 'delete'])->name('students.delete');
+// Route::put('/students/{id}', [StudentController::class,'update'])->name('students.update');
+// Route::get('/students/{id}/edit', [StudentController::class,'edit'])->name('students.edit');
+// Route::get('/students', [StudentController::class, 'index'])->name('students.index');
+// Route::get('/students/create', [StudentController::class, 'create'])->name('students.create');
+// Route::post('/students', [StudentController::class, 'store'])->name('students.store');
+// Route::get('/students/{id}', [StudentController::class, 'show'])->name('students.show');
+Route::resource('students', StudentController::class);
 
 Route::get('/', function () {
     return view('welcome');

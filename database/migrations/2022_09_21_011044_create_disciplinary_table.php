@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('disciplinaries', function (Blueprint $table) {
+        Schema::create('disciplinarys', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name_disciplinary');
             $table->integer('workload');
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('disciplinaries');
+        Schema::dropIfExists('disciplinarys');
     }
 };

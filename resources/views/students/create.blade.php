@@ -2,7 +2,7 @@
 
 @section('title', 'Novo Usuário')
 @section('content_header')
-    <h1>Novo Professor</h1>
+    <h1>Novo Aluno </h1>
 @stop
 @section('content')
 @if ($errors->any())

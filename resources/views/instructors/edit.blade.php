@@ -27,6 +27,8 @@
     <div class="col-md-12 text-end" style="margin-top: 2rem">
     <button class="btn btn-primary" type="submit">Salvar</button>
 </div>
+</div>
+
 </form>
 
 @endsection

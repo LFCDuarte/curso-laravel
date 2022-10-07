@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
-@section('title', 'Listagem do Professor')
+@section('title', 'Listagem do Estudande')
 
 @section('content')
 
-<h1>Listagem do Professor {{$instructor->name}}</h1>
+<h1>Listagem do Professor {{$student->name}}</h1>
 
 <ul>
         
-    <li> {{$instructor->name}} </li>
-    <li> {{$instructor->email}} </li>
-    <li> {{$instructor->created_at}}</li>
+    <li> {{$student->name}} </li>
+    <li> {{$student->email}} </li>
+    <li> {{$student->created_at}}</li>
 
 </ul>
 
-<form action="{{ route('instructors.delete', $instructor->id)}}" method="POST">
+<form action="{{ route('students.destroy', $student->id)}}" method="POST">
     @method('DELETE')
     @csrf  
     <button type= "submit"> Deletar</button>

@@ -7,15 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Disciplinary extends Model
 {
-    protected $table='disciplinaries';
+    
+    protected $table='disciplinarys';
     
     protected $fillable = [
         'name_disciplinary',
         'workload',
     ];
 
-    public function InstructorDiscipline()
+    public function InstructorDiscipliny()
     {
-        return $this->hasMany(InstructorDiscipline::class, 'disciplinary_id');
+        return $this->hasMany(InstructorDiscipliny::class, 'disciplinary_id');
     }
 }
